@@ -75,11 +75,11 @@ int main() {
 
 ##### Output 1
 
-![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/blob/main/Output/output-latihan-01-01.png)
+![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/Output/output-latihan-01-01.png)
 
 ##### Output 2
 
-![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/blob/main/Output/output-latihan-01-02.png)
+![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/Output/output-latihan-01-02.png)
 
 Program ini dirancang untuk menerima dua buah masukan angka pecahan (floating-point) dari pengguna [1]. Variabel dideklarasikan dengan tipe data float agar mampu menyimpan angka desimal [2]. Setelah nilai dimasukkan, program secara otomatis menghitung dan menampilkan hasil penjumlahan, pengurangan, perkalian, serta pembagian [1]. Khusus untuk operasi pembagian, disertakan struktur pengecekan kondisi if (b != 0) guna mencegah terjadinya error runtime akibat pembagian dengan angka nol [2].
 
@@ -158,11 +158,11 @@ int main() {
 
 ##### Output 1
 
-![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/blob/main/Output/output-latihan-02-01.png)
+![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/Output/output-latihan-02-01.png)
 
 ##### Output 2
 
-![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/blob/main/Output/output-latihan-02-02.png)
+![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/Output/output-latihan-02-02.png)
 
 Program ini berfungsi untuk menerjemahkan angka bilangan bulat positif dari rentang 0 hingga 100 menjadi bentuk tulisan kata-kata [1]. Validasi awal digunakan untuk memastikan input berada dalam batas yang diizinkan [2]. Logika program memecah angka menggunakan operator pembagian bulat (/) untuk mendapatkan digit puluhan dan operator sisa bagi / modulus (%) untuk mendapatkan digit satuan [1]. Struktur percabangan switch-case diterapkan secara efektif untuk memetakan nilai puluhan dan satuan ke dalam bentuk string terbilang secara akurat [2].
 
@@ -210,11 +210,11 @@ int main() {
 
 ##### Output 1
 
-![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/blob/main/Output/output-latihan-03-01.png)
+![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/Output/output-latihan-03-01.png)
 
 ##### Output 2
 
-![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/blob/main/Output/output-latihan-03-02.png)
+![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/Output/output-latihan-03-02.png)
 
 Program ketiga memanfaatkan konsep perulangan bersarang (nested loop) untuk mencetak pola angka simetris yang mengerucut ke bawah dengan posisi rata tengah (center alignment) [1]. Perulangan luar mengatur jumlah baris menurun dari angka input n hingga 1, sementara perulangan di dalam mengatur pencetakan spasi kiri, urutan angka menurun di sisi kiri, karakter bintang (*) sebagai pemisah di tengah, dan urutan angka menaik di sisi kanan [2]. Baris terakhir ditutup dengan mencetak simbol bintang tunggal yang diposisikan tepat di tengah-tengah pola [1].
 
