@@ -54,6 +54,279 @@ Dalam C++, prosedur adalah fungsi bertipe void yang berarti fungsi tersebut tida
 
 Parameter yang dikirimkan ke dalam fungsi dapat berupa Call by Value (menyalin nilai, variabel asli tidak berubah), Call by Pointer (melewatkan alamat memori dengan pointer sehingga nilai variabel asli dapat diubah), atau Call by Reference (melewatkan referensi variabel menggunakan & pada parameter formal).
 
+## Guided
+
+### 1. Penggunaan Dasar Pointer
+
+```C++
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x, y;
+    int *px;
+    
+    x = 87;
+    px = &x;
+    y = *px;
+    
+    cout << "Alamat x= " << &x << endl;
+    cout << "Isi px= " << px << endl;
+    cout << "Isi X= " << x << endl;
+    cout << "Nilai yang ditunjuk px= " << *px << endl;
+    cout << "Nilai y= " << y << endl;
+    
+    return 0;
+}
+```
+
+### Output Guided 1 :
+
+##### Output 1
+
+![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/blob/main/Week-02/Output/output-guided-01-01.png)
+
+Program ini mendemonstrasikan cara kerja pointer dan alamat memori. Variabel px menyimpan alamat dari x menggunakan perintah px = &x;. Variabel y kemudian diisi dengan nilai yang ditunjuk oleh px menggunakan perintah y = *px;, sehingga y memiliki nilai yang sama dengan x yaitu 87.
+
+### 2. Implementasi Array 1 Dimensi dan 2 Dimensi
+
+```C++
+#include <iostream>
+#define MAX 5
+using namespace std;
+
+int main() {
+    int i, j;
+    float nilai[MAX];
+    static int nilai_tahun[MAX][MAX] = {
+        {0,2,2,0,0},
+        {0,1,1,1,0},
+        {4,4,0,0,4},
+        {0,3,3,3,0},
+        {5,0,0,0,5}
+    };
+    
+    for (i = 0; i < MAX; i++) {
+        cout << "masukkan nilai ke-" << i+1 << endl;
+        cin >> nilai[i];
+    }
+    
+    cout << "\ndata nilai siswa : \n";
+    for (i = 0; i < MAX; i++) {
+        cout << "nilai ke-" << i+1 << " = " << nilai[i] << endl;
+    }
+    
+    cout << "\n nilai tahunan: \n";
+    for (i = 0; i < MAX; i++) {
+        for (j = 0; j < MAX; j++) {
+            cout << nilai_tahun[i][j];
+        }
+        cout << "\n";
+    }
+    return 0;
+}
+```
+
+### Output Guided 2 :
+
+##### Output 1
+
+![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/blob/main/Week-02/Output/output-guided-02-01.png)
+
+##### Output 2
+
+![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/blob/main/Week-02/Output/output-guided-02-02.png)
+
+Program ini menggabungkan penggunaan array satu dimensi (nilai) yang diisi secara dinamis oleh pengguna, dan array dua dimensi (nilai_tahun) yang diinisialisasi secara statis layaknya matriks atau tabel. Perulangan bersarang (for di dalam for) digunakan untuk mencetak isi dari array dua dimensi secara berbaris.
+
+### 3. Implementasi Array 1 Dimensi dan 2 Dimensi
+
+```C++
+#include <iostream>
+using namespace std;
+
+int maks3(int a, int b, int c);
+
+int main() {
+    int x, y, z;
+    cout << "masukkan nilai bilangan ke-1 = ";
+    cin >> x;
+    cout << "masukkan nilai bilangan ke-2 = ";
+    cin >> y;
+    cout << "masukkan nilai bilangan ke-3 = ";
+    cin >> z;
+    
+    cout << "nilai maksimumnya adalah = " << maks3(x, y, z);
+    return 0;
+}
+
+int maks3(int a, int b, int c) {
+    int temp_max = a;
+    if (b > temp_max)
+        temp_max = b;
+    if (c > temp_max)
+        temp_max = c;
+    return (temp_max);
+}
+```
+
+### Output Guided 3 :
+
+##### Output 1
+
+![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/blob/main/Week-02/Output/output-guided-03-01.png)
+
+##### Output 2
+
+![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/blob/main/Week-02/Output/output-guided-03-02.png)
+
+Program ini memanfaatkan fungsi maks3 yang memiliki tipe kembalian (return type) int untuk mencari nilai terbesar dari tiga buah bilangan. Fungsi dipanggil pada fungsi utama main() dengan melewatkan parameter aktual x, y, z ke dalam parameter formal a, b, c menggunakan mekanisme Call by Value.
+
+### 4. Implementasi Array 1 Dimensi dan 2 Dimensi
+
+```C++
+#include <iostream>
+using namespace std;
+
+void tulis (int x);
+
+int main()
+{
+    int jum;
+    cout << " jumlah baris kata=";
+    cin >> jum;
+    tulis (jum);
+    return 0;
+}
+
+void tulis (int x) {
+    for (int i=0;i<x;i++) {
+        cout<<"baris ke-"<<i+1<<endl;
+    }
+}
+```
+
+### Output Guided 4 :
+
+##### Output 1
+
+![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/blob/main/Week-02/Output/output-guided-04-01.png)
+
+##### Output 2
+
+![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/blob/main/Week-02/Output/output-guided-04-02.png)
+
+Program ini mendemonstrasikan pembuatan sebuah prosedur menggunakan tipe data void. Prosedur tulis menerima satu masukan parameter bilangan bulat x dan mencetak kalimat sebanyak angka masukan tersebut. Tidak ada nilai kembalian pada baris terakhir fungsi prosedur ini.
+
+### 5. Cara Melewatkan Parameter
+
+### Call by Value
+```C++
+#include <iostream>
+using namespace std;
+
+void tukar (int x, int y);
+
+int main () {
+    int a, b; a=4; b=6;
+    cout << "kondisi sebelum ditukar \n";
+    cout <<"a= "<<a<<" b = "<<b<<endl;
+    
+    tukar (a,b);
+    
+    cout<<"kondisi setelah ditukar \n";
+    cout <<"a= "<<a<<" b = "<<b<<endl;
+    return 0;
+}
+
+void tukar (int x, int y) {
+    int temp;
+    temp = x;
+    x = y;
+    y = temp;
+    cout << "nilai akhir pada fungsi tukar \n";
+    cout << " x = "<<x<<" y = "<<y<<endl;
+}
+```
+
+### Call by Reference
+```C++
+#include <iostream>
+using namespace std;
+
+void tukar (int &x, int &y);
+
+int main () {
+    int a, b;
+    a=4; b=6;
+    cout << "kondisi sebelum ditukar \n";
+    cout << " a = "<<a<<" b = "<<b<<endl;
+    
+    tukar (a,b);
+    
+    cout<<"kondisi setelah ditukar \n";
+    cout <<"a= "<<a<<" b = "<<b<<endl;
+    return 0;
+}
+
+void tukar (int &x, int &y) {
+    int temp;
+    temp = x;
+    x = y;
+    y = temp;
+    cout<< "nilai akhir pada fungsi tukar \n";
+    cout << " x = "<<x<<" y = "<<y<<endl;
+}
+```
+
+### Call by Pointer
+```C++
+#include <iostream>
+using namespace std;
+
+void tukar (int *x, int *y);
+
+int main () {
+    int a, b; a=4; b=6;
+    cout << "kondisi sebelum ditukar \n";
+    cout << "a = "<<a<<" b = "<<b<<endl;
+    
+    tukar (&a,&b);
+    
+    cout<<"kondisi setelah ditukar \n";
+    cout <<"a= "<<a<<" b = "<<b<<endl;
+    return 0;
+}
+
+void tukar (int *x, int *y) {
+    int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
+    cout << "nilai akhir pada fungsi tukar \n";
+    cout << " x = "<<*x<<" y = "<<*y<<endl;
+}
+```
+
+### Output Guided 5 :
+
+##### Output 1
+
+![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/blob/main/Week-02/Output/output-guided-05-a.png)
+
+##### Output 2
+
+![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/blob/main/Week-02/Output/output-guided-05-b.png)
+
+##### Output 3
+
+![Screenshot Output Unguided 1_1](https://github.com/Allsche/109082500080_Dadi-Maulana-Muhammad_Struktur-Data/blob/main/Week-02/Output/output-guided-05-c.png)
+
+Bagian ini membandingkan ketiga jenis passing parameter.
+Pada Call by Value, nilai parameter asli tidak berubah karena hanya nilainya yang disalin ke parameter formal.
+Pada Call by Reference, perubahan terjadi secara permanen karena argumen fungsi menggunakan referensi parameter awal &.
+Pada Call by Pointer, fungsi menerima pointer (address) sebagai masukan, yang kemudian di-dereference * sehingga dapat memanipulasi variabel asal secara langsung. 
+
 ## Unguided
 
 ### 1. Buatlah program yang dapat melakukan operasi penjumlahan, pengurangan, dan perkalian matriks 3x3.
